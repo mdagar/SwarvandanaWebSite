@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2BB4EAA-32BF-4E4F-ACD2-7C70F42F52F5}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SwarvandanaWebSite</RootNamespace>
+    <AssemblyName>SwarvandanaWebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\assets\bxslider\images\bx_loader.gif" />
+    <Content Include="Content\assets\bxslider\images\left-hover.png" />
+    <Content Include="Content\assets\bxslider\images\left.png" />
+    <Content Include="Content\assets\bxslider\images\right-hover.png" />
+    <Content Include="Content\assets\bxslider\images\right.png" />
+    <Content Include="Content\assets\bxslider\jquery.bxslider.css" />
+    <Content Include="Content\assets\bxslider\jquery.bxslider.js" />
+    <Content Include="Content\assets\bxslider\jquery.bxslider.min.js" />
+    <Content Include="Content\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\owlcarousel\owl.carousel.css" />
+    <Content Include="Content\assets\owlcarousel\owl.carousel.js" />
+    <Content Include="Content\assets\owlcarousel\owl.theme.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-reset.css" />
+    <Content Include="Content\css\bootstrap-social.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\component.css" />
+    <Content Include="Content\css\flexslider.css" />
+    <Content Include="Content\css\magnific-popup.css" />
+    <Content Include="Content\css\mixitup.css" />
+    <Content Include="Content\css\parallax-slider\parallax-slider.css" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\css\sequencejs-theme.apple-style.css" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\bg-controls.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\bt-next.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\bt-pause.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\bt-play.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\bt-prev.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\ipad-shadow.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\ipad.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\iphone-shadow.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\iphone.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\pause-icon.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\sequence-logo.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\images\status-bar.png" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\index.html" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scripts\jquery-min.js" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scripts\jquery.ba-hashchange.min.js" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scripts\jquery.js" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scripts\jquery.sequence-min.js" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scripts\jquery.sequence.js" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\sequencejs-options.apple-style.js" />
+    <Content Include="Content\css\seq-slider\apple-style\license-free-theme.txt" />
+    <Content Include="Content\css\seq-slider\apple-style\readme-free.txt" />
+    <Content Include="Content\css\seq-slider\apple-style\release-history.txt" />
+    <Content Include="Content\css\seq-slider\apple-style\sequence-apple-style.jpg" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\._readme-free.txt" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\._sequence-apple-style.jpg" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._bg-controls.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._bt-next.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._bt-pause.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._bt-play.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._bt-prev.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._ipad-shadow.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._ipad.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._iphone-shadow.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._iphone.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._pause-icon.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._sequence-logo.png" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\images\._status-bar.png" />
+    <Content Include="Content\css\seq-slider\sequencejs-theme.apple-style.css" />
+    <Content Include="Content\css\seq-slider\sequencejs-theme.modern-slide-in.css" />
+    <Content Include="Content\css\seq-slider\sequencejs-theme.sliding-horizontal-parallax.css" />
+    <Content Include="Content\css\style-responsive.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\superfish-vertical.css" />
+    <Content Include="Content\css\superfish.css" />
+    <Content Include="Content\css\theme.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\1.png" />
+    <Content Include="Content\img\2.png" />
+    <Content Include="Content\img\3.png" />
+    <Content Include="Content\img\bg_direction_nav.png" />
+    <Content Include="Content\img\blog\blog-thumb-1.jpg" />
+    <Content Include="Content\img\blog\blog-thumb-2.jpg" />
+    <Content Include="Content\img\blog\blog-thumb-3.jpg" />
+    <Content Include="Content\img\blog\img3.jpg" />
+    <Content Include="Content\img\blog\img4.jpg" />
+    <Content Include="Content\img\blog\img5.jpg" />
+    <Content Include="Content\img\blog\img6.jpg" />
+    <Content Include="Content\img\blog\img7.jpg" />
+    <Content Include="Content\img\blog\img8.jpg" />
+    <Content Include="Content\img\clients\graylogo6.png" />
+    <Content Include="Content\img\clients\newlogo6.png" />
+    <Content Include="Content\img\ipadwhite.png" />
+    <Content Include="Content\img\link-icon.png" />
+    <Content Include="Content\img\mob1.png" />
+    <Content Include="Content\img\nbg.jpg" />
+    <Content Include="Content\img\parallax-slider\images\1.png" />
+    <Content Include="Content\img\parallax-slider\images\12.png" />
+    <Content Include="Content\img\parallax-slider\images\2.png" />
+    <Content Include="Content\img\parallax-slider\images\21.png" />
+    <Content Include="Content\img\parallax-slider\images\3.png" />
+    <Content Include="Content\img\parallax-slider\images\31.png" />
+    <Content Include="Content\img\parallax-slider\images\4.png" />
+    <Content Include="Content\img\parallax-slider\images\arrows.png" />
+    <Content Include="Content\img\parallax-slider\images\bg.png" />
+    <Content Include="Content\img\parallax-slider\images\ImageAttribution.txt" />
+    <Content Include="Content\img\parallax-slider\images\main-bg.jpg" />
+    <Content Include="Content\img\parallax-slider\images\waves.gif" />
+    <Content Include="Content\img\person_1.png" />
+    <Content Include="Content\img\person_2.png" />
+    <Content Include="Content\img\person_3.png" />
+    <Content Include="Content\img\portfolios\app\1.jpg" />
+    <Content Include="Content\img\portfolios\app\2.jpg" />
+    <Content Include="Content\img\portfolios\app\3.jpg" />
+    <Content Include="Content\img\portfolios\app\4.jpg" />
+    <Content Include="Content\img\portfolios\app\5.jpg" />
+    <Content Include="Content\img\portfolios\card\1.jpg" />
+    <Content Include="Content\img\portfolios\card\2.jpg" />
+    <Content Include="Content\img\portfolios\card\3.jpg" />
+    <Content Include="Content\img\portfolios\card\4.jpg" />
+    <Content Include="Content\img\portfolios\icon\1.jpg" />
+    <Content Include="Content\img\portfolios\icon\2.jpg" />
+    <Content Include="Content\img\portfolios\icon\3.jpg" />
+    <Content Include="Content\img\portfolios\icon\4.jpg" />
+    <Content Include="Content\img\portfolios\icon\5.jpg" />
+    <Content Include="Content\img\portfolios\logo\1.jpg" />
+    <Content Include="Content\img\portfolios\logo\2.jpg" />
+    <Content Include="Content\img\portfolios\logo\3.jpg" />
+    <Content Include="Content\img\portfolios\logo\4.jpg" />
+    <Content Include="Content\img\portfolios\logo\5.jpg" />
+    <Content Include="Content\img\portfolios\logo\6.jpg" />
+    <Content Include="Content\img\portfolios\logo\7.jpg" />
+    <Content Include="Content\img\portfolios\web\1.jpg" />
+    <Content Include="Content\img\portfolios\web\2.jpg" />
+    <Content Include="Content\img\portfolios\web\3.jpg" />
+    <Content Include="Content\img\portfolios\web\4.jpg" />
+    <Content Include="Content\img\product1.jpg" />
+    <Content Include="Content\img\product2.jpg" />
+    <Content Include="Content\img\search-icon.jpg" />
+    <Content Include="Content\img\search-icon.png" />
+    <Content Include="Content\img\seq-slider\abstract-16729_1920.jpg" />
+    <Content Include="Content\img\seq-slider\aeroplane.png" />
+    <Content Include="Content\img\seq-slider\balloon.png" />
+    <Content Include="Content\img\seq-slider\bg-clouds.png" />
+    <Content Include="Content\img\seq-slider\bg-controls.png" />
+    <Content Include="Content\img\seq-slider\bg-sky.png" />
+    <Content Include="Content\img\seq-slider\bt-next-a.png" />
+    <Content Include="Content\img\seq-slider\bt-next-gr.png" />
+    <Content Include="Content\img\seq-slider\bt-next.png" />
+    <Content Include="Content\img\seq-slider\bt-pause.png" />
+    <Content Include="Content\img\seq-slider\bt-play.png" />
+    <Content Include="Content\img\seq-slider\bt-prev-a.png" />
+    <Content Include="Content\img\seq-slider\bt-prev-gr.png" />
+    <Content Include="Content\img\seq-slider\bt-prev.png" />
+    <Content Include="Content\img\seq-slider\ipad-shadow.png" />
+    <Content Include="Content\img\seq-slider\ipad.png" />
+    <Content Include="Content\img\seq-slider\ipad2.png" />
+    <Content Include="Content\img\seq-slider\ipad_demo.png" />
+    <Content Include="Content\img\seq-slider\iphone-shadow.png" />
+    <Content Include="Content\img\seq-slider\iphone.png" />
+    <Content Include="Content\img\seq-slider\iphone_demo.png" />
+    <Content Include="Content\img\seq-slider\kite.png" />
+    <Content Include="Content\img\seq-slider\pause-icon.png" />
+    <Content Include="Content\img\seq-slider\sequence-logo.png" />
+    <Content Include="Content\img\seq-slider\status-bar.png" />
+    <Content Include="Content\img\service1.jpg" />
+    <Content Include="Content\img\service2.jpg" />
+    <Content Include="Content\img\service3.jpg" />
+    <Content Include="Content\img\service4.jpg" />
+    <Content Include="Content\img\service5.jpg" />
+    <Content Include="Content\img\tab1.png" />
+    <Content Include="Content\img\team\bg.png" />
+    <Content Include="Content\img\team\member1.jpg" />
+    <Content Include="Content\img\team\member2.jpg" />
+    <Content Include="Content\img\team\member3.jpg" />
+    <Content Include="Content\img\team\member4.jpg" />
+    <Content Include="Content\img\team\placeholder.gif" />
+    <Content Include="Content\img\tg-black-bg.png" />
+    <Content Include="Content\img\triangle.png" />
+    <Content Include="Content\img\works\img10.jpg" />
+    <Content Include="Content\img\works\img11.jpg" />
+    <Content Include="Content\img\works\img12.jpg" />
+    <Content Include="Content\img\works\img13.jpg" />
+    <Content Include="Content\img\works\img8.jpg" />
+    <Content Include="Content\img\works\img9.jpg" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\common-scripts.js" />
+    <Content Include="Content\js\hover-dropdown.js" />
+    <Content Include="Content\js\html5shiv.js" />
+    <Content Include="Content\js\jquery-1.8.3.min.js" />
+    <Content Include="Content\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="Content\js\jquery.easing.min.js" />
+    <Content Include="Content\js\jquery.flexslider.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.magnific-popup.js" />
+    <Content Include="Content\js\jquery.parallax-1.1.3.js" />
+    <Content Include="Content\js\link-hover.js" />
+    <Content Include="Content\js\mixitup.js" />
+    <Content Include="Content\js\parallax-slider\jquery.cslider.js" />
+    <Content Include="Content\js\parallax-slider\modernizr.custom.28468.js" />
+    <Content Include="Content\js\seq-slider\jquery.ba-hashchange.min.js" />
+    <Content Include="Content\js\seq-slider\jquery.sequence-min.js" />
+    <Content Include="Content\js\seq-slider\jquery.sequence.js" />
+    <Content Include="Content\js\seq-slider\sequencejs-options.apple-style.js" />
+    <Content Include="Content\js\seq-slider\sequencejs-options.modern-slide-in.js" />
+    <Content Include="Content\js\seq-slider\sequencejs-options.sliding-horizontal-parallax.js" />
+    <Content Include="Content\js\superfish.js" />
+    <Content Include="Content\js\wow.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\img\banner\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\assets\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\assets\font-awesome\less\core.less" />
+    <Content Include="Content\assets\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\assets\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\assets\font-awesome\less\icons.less" />
+    <Content Include="Content\assets\font-awesome\less\larger.less" />
+    <Content Include="Content\assets\font-awesome\less\list.less" />
+    <Content Include="Content\assets\font-awesome\less\mixins.less" />
+    <Content Include="Content\assets\font-awesome\less\path.less" />
+    <Content Include="Content\assets\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\assets\font-awesome\less\spinning.less" />
+    <Content Include="Content\assets\font-awesome\less\stacked.less" />
+    <Content Include="Content\assets\font-awesome\less\variables.less" />
+    <Content Include="Content\assets\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_core.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_list.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_path.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\assets\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\css\.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scripts\.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scss\.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scss\partials\mixins.scss" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scss\partials\reset.scss" />
+    <Content Include="Content\css\seq-slider\apple-style\apple-style\scss\sequencejs-theme.apple-style.scss" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\._.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\css\._.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\scripts\._.DS_Store" />
+    <Content Include="Content\css\seq-slider\apple-style\__MACOSX\apple-style\scss\._.DS_Store" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\__Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60702</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60679/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
