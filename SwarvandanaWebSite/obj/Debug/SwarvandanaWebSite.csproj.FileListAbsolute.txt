@@ -29,3 +29,4 @@ D:\Projects\OthertestSample\SwarvandanaWebsite\Website\SwarvandanaWebSite\Swarva
 D:\Projects\OthertestSample\SwarvandanaWebsite\Website\SwarvandanaWebSite\SwarvandanaWebSite\bin\System.Web.WebPages.Razor.xml
 D:\Projects\OthertestSample\SwarvandanaWebsite\Website\SwarvandanaWebSite\SwarvandanaWebSite\obj\Debug\SwarvandanaWebSite.dll
 D:\Projects\OthertestSample\SwarvandanaWebsite\Website\SwarvandanaWebSite\SwarvandanaWebSite\obj\Debug\SwarvandanaWebSite.pdb
+D:\Projects\OthertestSample\SwarvandanaWebsite\Website\SwarvandanaWebSite\SwarvandanaWebSite\obj\Debug\SwarvandanaWebSite.csprojResolveAssemblyReference.cache

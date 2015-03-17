@@ -16,5 +16,55 @@ namespace SwarvandanaWebSite.Controllers
             return View();
         }
 
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Courses()
+        {
+            return View();
+        }
+
+        public ActionResult Faculty()
+        {
+            return View();
+        }
+
+        public ActionResult Events()
+        {
+            return View();
+        }
+
+        public ActionResult News()
+        {
+            return View();
+        }
+
+        public ActionResult Testimonial()
+        {
+            return View();
+        }
+
+        public ActionResult Affiliations()
+        {
+            return View();
+        }
+
+        public ActionResult Vision()
+        {
+            return View();
+        }
+
+        public ActionResult Franchise()
+        {
+            return View();
+        }
+
     }
 }
