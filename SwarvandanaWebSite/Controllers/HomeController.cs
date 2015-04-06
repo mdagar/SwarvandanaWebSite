@@ -66,5 +66,15 @@ namespace SwarvandanaWebSite.Controllers
             return View();
         }
 
+        public ActionResult videos()
+        {
+            return View();
+        }
+
+        public ActionResult corporate()
+        {
+            return View();
+        }
+        
     }
 }

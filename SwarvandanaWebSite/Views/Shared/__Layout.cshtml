@@ -39,11 +39,10 @@
     </script>
     <![endif]-->
 </head>
-
-<body>
+<body style="background-image: url('../content/images/bg_img1.jpg')">
     <!--header start-->
     <header class="head-section">
-        <div class="navbar navbar-default navbar-static-top container">
+        <div style="background-color: #FAC748" class="navbar navbar-default navbar-static-top container">
             <div class="navbar-header">
                 <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
                     <span class="icon-bar"></span>
@@ -51,7 +50,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="@Url.Action("Index","Home")">
-                @*Swar<span>vandana</span>*@
+                    @*Swar<span>vandana</span>*@
                     <img src="@Url.Content("~/content/images/logo.png")" />
                 </a>
             </div>
@@ -69,21 +68,16 @@
                             <li>
                                 <a href="@Url.Action("About","Home")">About US</a>
                             </li>
-                            <li>
-                                <a href="@Url.Action("Vision", "Home")">Vision</a>
 
-                            </li>
                             <li>
                                 <a href="@Url.Action("Faculty", "Home")">Faculty</a>
-                                
+
                             </li>
                             <li>
                                 <a href="@Url.Action("Affiliations", "Home")">Affiliations</a>
                             </li>
-                            <li>
-                                <a href="@Url.Action("Franchise", "Home")">Franchise</a>
-                            </li>
-                            
+
+
                         </ul>
                     </li>
 
@@ -91,22 +85,17 @@
                         <a href="@Url.Action("courses","Home")">Courses</a>
                     </li>
 
+                    <li>
+                        <a href="@Url.Action("corporate", "Home")">corporate</a>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown" data-toggle="dropdown" href="#">
-                            Events <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">                                                   
-                            <li>
-                                <a href="@Url.Action("Events", "Home")">Events</a>
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Testimonial", "Home")">Testimonial</a>
-                            </li>
-                            <li>
-                                <a href="@Url.Action("News", "Home")">News</a>
-                            </li>
-                        </ul>
+                    </li>
+               
+                    <li>
+                        <a href="@Url.Action("Vision", "Home")">Vision & Mission</a>
+
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Franchise", "Home")">Franchise</a>
                     </li>
                     <li>
                         <a href="@Url.Action("contact","Home")">Contact</a>
@@ -143,11 +132,11 @@
                         <ul class="page-footer-list">
                             <li>
                                 <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("about", "Home")">About Us</a>
+                                <a href="@Url.Action("Testimonial", "Home")">Testimonial</a>
                             </li>
                             <li>
                                 <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("courses","Home")">Courses</a>
+                                <a href="@Url.Action("videos", "Home")">videos</a>
                             </li>
 
                             <li>
