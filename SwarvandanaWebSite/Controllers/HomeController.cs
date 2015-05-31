@@ -75,6 +75,19 @@ namespace SwarvandanaWebSite.Controllers
         {
             return View();
         }
+        public ActionResult Schools()
+        {
+            return View();
+        }
+        public ActionResult Mall()
+        {
+            return View();
+        }
+        public ActionResult MusicTherapy()
+        {
+            return View();
+        }
+       
         
     }
 }

@@ -1,94 +1,111 @@
 ﻿@{
-    ViewBag.Title = "Swarvandana | Contact";
+    ViewBag.Title = "";
     Layout = "~/Views/Shared/__Layout.cshtml";
 }
+<head>
+    <style type="text/css">
+        a:link {
+            color: #000;
+            text-decoration: none;
+        }
 
-<!--breadcrumbs start-->
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-sm-4">
-                <h1>
-                    Contacts
-                </h1>
-            </div>
-            <div class="col-lg-8 col-sm-8">
-            </div>
-        </div>
-    </div>
+        a:visited {
+            text-decoration: none;
+            color: #000;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #6f4207;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<div class="container_layout">
+    <table width="100%" border="0">
+        <tr>
+            <td align="left" valign="top" width="50%">
+
+                <table width="100%" border="0">
+                    <tr>
+                        <td align="left" valign="top" style="font-size:17px; line-height:25px; font-family:Arial, Helvetica, sans-serif;">
+                            <div class="heding2" style="margin:0px; padding:20px 0 5px 0px;">Gurgoan</div>
+                            SCO - 70, Sector - 40, Huda Market, Gurgaon,<br> Haryana - 122002<br>
+                            Contact: 0124- 4371653 / +91- 9643250627<br>
+                            Email: <a href="mailto:info@swarvandana.com">info@swarvandana.com</a><br>
+                            Web: <a href="#">swarvandana.com </a>
+                        </td>
+                    </tr>
+
+                    <tr><td><div style="border-top:solid 1px #d5bf83; height:20px; margin:20px 0 0 0px; width:100%;	"></div></td></tr>
+
+
+                    <tr>
+                        <td align="left" valign="top" style="font-size:17px; line-height:25px; font-family:Arial, Helvetica, sans-serif;">
+                            <div class="heding2" style="margin:0px; padding:20px 0 5px 0px;">Noida</div>
+
+                            A - 181, Sector - 48, Noida-201301<br>
+                            Contact: +0120-42137250 / +91- 9910494141 <br />
+                            Email: <a href="mailto:info@swarvandana.com">info@swarvandana.com</a><br>
+                            Web: <a href="#">swarvandana.com</a><br><br>
+
+                            PK-5, Near Amrapali Apartments, Sector - 122, Noida-201301<br>
+                            Contact: +91- 9899219816 <br />
+                            Email: <a href="malto:info@swarvandana.com">info@swarvandana.com</a><br>
+                            Web: <a href="#">swarvandana.com</a><br><br>
+
+
+                            Plot no 1, Institutional Area, Sector-62, Noida-201301 <br>
+                            Contact: +91- 9711276501 <br />
+                            Email: <a href="malto:info@swarvandana.com">info@swarvandana.com</a><br>
+                            Web: <a href="#">swarvandana.com</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>&nbsp;</td>
+            <td align="left" valign="top" width="40%">
+                <table width="80%" border="0">
+                    <tr>
+                        <td>
+                            <div class="heding2" style="text-align:left;">Send us a message</div>
+
+                            <input type="text" name="text" placeholder="Name"  maxlength="40" class="field"><br>
+                            <input type="text" name="text" placeholder="Email" maxlength="70" class="field"><br>
+                            <input type="text" name="text" placeholder="Contact Number" maxlength="18" class="field"><br>
+                            <input type="text" name="text" placeholder="Address" class="field"><br>                            
+                            <textarea class="textarea" placeholder="Message" maxlength="500" ></textarea>
+                            <div style="text-align:center; margin:12px 0 0 0px;"><a href="#"><img src="@Url.Content("~/Content/images/submit.jpg")"></a></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </div>
-<!--breadcrumbs end-->
-<!--container start-->
-<div class="container">
+<script>
 
+    function validEmail(e) {
+        var filter = "/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/";
+        return String(e).search(filter) != -1;
+    }
 
-    <div class="row">
-        <div class="col-lg-5 col-sm-5 address">
-            <section class="contact-infos">
-                <h4 class="title custom-font text-black">
-                    Noida
-                </h4>
-                <address>
-                    A - 181, Sector - 48,<br /> Noida - 201301
-                    <br />
-                    Email: info@swarvandana.com<br />
-                    Web: swarvandana.com
-                    <br /><br />
-                    PK-5, Near Amrapali Apartments<br /> Sector - 122, Noida - 201301<br />
-                    Email: info@swarvandana.com<br />
-                    Web: swarvandana.com 
-                </address>
-            </section>
-            <section class="contact-infos">
-                <h4 class="title custom-font text-black">
-                    Gurgaon
-                </h4>
-                <address>
-                    SCO - 70, Sector - 40, Huda Market<br /> Gurgaon, Haryana - 122002
-                    <br />
-                    Mobile: +0124- 4371653,+91- 9643250627 <br />
-                    Email: info@swarvandana.com<br />
-                    Web: swarvandana.com
-                </address>
-            </section>
-        </div>
-        <div class="col-lg-7 col-sm-7 address">
-            <h4>
-                Drop us a line so that we can hear from you
-            </h4>
-            <div class="contact-form">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="name">
-                            Name
-                        </label>
-                        <input type="text" placeholder="" id="name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">
-                            Email
-                        </label>
-                        <input type="text" placeholder="" id="email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">
-                            Phone
-                        </label>
-                        <input type="text" id="phone" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">
-                            Message
-                        </label>
-                        <textarea placeholder="" rows="5" class="form-control"></textarea>
-                    </div>
-                    <button class="btn btn-info" type="submit">
-                        Submit
-                    </button>
-                </form>
+    function phonenumber(inputtxt)  
+    {  
+        var phoneno = /^\d{10}$/;  
+        if((inputtxt.value.match(phoneno))  
+        {  
+            return true;  
+        }  
+        else  
+        {  
+            alert("message");  
+            return false;  
+        }  
+    }  
 
-            </div>
-        </div>
-    </div>
-
-</div>
+</script>

@@ -1,287 +1,98 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>@ViewBag.Title</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet">
-    <link href="@Url.Content("~/Content/css/theme.css")" rel="stylesheet">
-    <link href="@Url.Content("~/Content/css/bootstrap-reset.css")" rel="stylesheet">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">-->
-    <!--external css-->
-    <link href="@Url.Content("~/Content/assets/font-awesome/css/font-awesome.css")" rel="stylesheet" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/css/flexslider.css")" />
-    <link href="@Url.Content("~/Content/assets/bxslider/jquery.bxslider.css")" rel="stylesheet" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/css/animate.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/owlcarousel/owl.carousel.css")" />
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/owlcarousel/owl.theme.css")" />
-
-    <link href="@Url.Content("~/Content/css/superfish.css")" rel="stylesheet" media="screen" />
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/component.css")" />
-    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" />
-    <link href="@Url.Content("~/Content/css/style-responsive.css")" rel="stylesheet" />
-
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/css/parallax-slider/parallax-slider.css")" />
-    <script type="text/javascript" src="@Url.Content("~/Content/js/parallax-slider/modernizr.custom.28468.js")">
-    </script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js">
-    </script>
-    <script src="js/respond.min.js">
-    </script>
+    <title>Svar-Vandana : A complete Music,Dance & Art Academy </title>
+    <link href="@Url.Content("~/Content/css/styleheet.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Contentfont/vani0.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/slider/style.css")">
+    <script src="@Url.Content("~/content/slider/lean-slider.js")"></script>
+    <link rel="stylesheet" href="@Url.Content("~/content/slider/lean-slider.css")" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/content/slider/sample-styles.css")" type="text/css" />
+    <link href="@Url.Content("~/content/banner/stylesheets/jquerysctipttop.css")" rel="stylesheet" type="text/css">    
+    <link href="@Url.Content("~/content/banner/stylesheets/screen.css")" media="screen, projection" rel="stylesheet" type="text/css" />    
+    <link href="@Url.Content("~/content/banner/stylesheets/print.css")" media="print" rel="stylesheet" type="text/css" />    
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
+    <link href="@Url.Content("~/content/banner/stylesheets/responsive-carousel.css")" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
-<body style="background-image: url('../content/images/bg_img1.jpg')">
-    <!--header start-->
-    <header class="head-section">
-        <div style="background-color: #FAC748" class="navbar navbar-default navbar-static-top container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="@Url.Action("Index","Home")">
-                    @*Swar<span>vandana</span>*@
-                    <img src="@Url.Content("~/content/images/logo.png")" />
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="@Url.Action("Index","Home")">Home</a>
-                    </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown" data-toggle="dropdown" href="#">
-                            About <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="@Url.Action("About","Home")">About US</a>
-                            </li>
+<body>
+@{
+    string currentAction = ViewContext.RouteData.GetRequiredString("action");
+    string currentController = ViewContext.RouteData.GetRequiredString("controller");
+}
+    <div class="main_layout">
+        <div class="logo"><a href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/content/images/logo.png")" width="144" height="105" alt="" /></a></div>
 
-                            <li>
-                                <a href="@Url.Action("Faculty", "Home")">Faculty</a>
-
-                            </li>
-                            <li>
-                                <a href="@Url.Action("Affiliations", "Home")">Affiliations</a>
-                            </li>
-
-
+        <div class=" menu_bar">
+            <nav id="nav" role="navigation">
+                <a href="#nav" title="Show navigation">Show navigation</a>
+                <a href="#" title="Hide navigation">Hide navigation</a>
+                <ul class="clearfix">
+                    <li><a href="@Url.Action("Index", "Home")" class="@((currentAction == "Index" && currentController == "Home") ? "selected" : "")">Home</a></li>
+                    @*<li>
+                        <a href="courses.html">Courses</a>
+                        <ul>
+                            <li> <a href="#"> Projet 1</a>  </li>
+                            <li><a href="#"> Project 2 </a>  </li>
                         </ul>
-                    </li>
+                    </li>*@
+                    
+                    <li><a href="@Url.Action("corporate","Home")" class="@((currentAction == "corporate" && currentController == "Home") ? "selected" : "")">Corporate</a></li>
+                    <li><a href="@Url.Action("Schools", "Home")" class="@((currentAction == "Schools" && currentController == "Home") ? "selected" : "")">Schools</a></li>
+                    <li><a href="@Url.Action("Mall", "Home")" class="@((currentAction == "Mall" && currentController == "Home") ? "selected" : "")">Mall</a></li>
+                    <li><a href="@Url.Action("MusicTherapy", "Home")" class="@((currentAction == "MusicTherapy" && currentController == "Home") ? "selected" : "")">Music Therapy</a></li>
+                    <li><a href="@Url.Action("Franchise", "Home")" class="@((currentAction == "Franchise" && currentController == "Home") ? "selected" : "")">Franchisee</a></li>
+                    <li><a href="@Url.Action("Contact","Home")" class="@((currentAction == "Contact" && currentController == "Home") ? "selected" : "")">Contact</a></li>
 
-                    <li>
-                        <a href="@Url.Action("courses","Home")">Courses</a>
-                    </li>
 
-                    <li>
-                        <a href="@Url.Action("corporate", "Home")">corporate</a>
 
-                    </li>
-               
-                    <li>
-                        <a href="@Url.Action("Vision", "Home")">Vision & Mission</a>
-
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Franchise", "Home")">Franchise</a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("contact","Home")">Contact</a>
-                    </li>
                 </ul>
-            </div>
+            </nav>
+
         </div>
-    </header>
-    <!--header end-->
+    </div>
     @RenderBody()
-    <!--footer start-->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-3 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                    <h1>
-                        contact info
-                    </h1>
+   
+    <div class="footerbg">
+        <div class="footer_container">
+            <a href="@Url.Action("Events", "Home")">Events</a> |  <a href="@Url.Action("Vision", "Home")">Vision</a> |  <a href="@Url.Action("Courses", "Home")">Courses</a> |  <a href="@Url.Action("News", "Home")">News</a> |  <a href="@Url.Action("Affiliations", "Home")">Affiliations</a> |  <a href="@Url.Action("Faculty", "Home")">Faculity</a> |  <a href="@Url.Action("Testimonial", "Home")">Testimonial</a>  <br>
+<div style="font-weight:bold;"><strong> &copy; 2015 - 2016  svarvandana</strong></div>
+</div>
+    </div>
 
-                    <address>
-                        <p><i class="fa fa-home pr-10"></i>Address:  A - 181,Sec. - 48, Noida.</p>
-                        <p><i class="fa fa-home pr-10"></i>Address:  PK-5, Sec. - 122, Noida. </p>
-                        <p><i class="fa fa-home pr-10"></i>Address:  SCO-70, Sec. - 40, Gurgaon </p>
-                        <p><i class="fa fa-envelope pr-10"></i>Email :   <a href="javascript:;">info@swarvandana.com</a></p>
-                        <p><i class="fa fa-globe pr-10"></i>Web :  <a href="javascript:;">swarvandana.com</a></p>
-                    </address>
-
-                </div>
-                <div class="col-lg-3 col-sm-3">
-                    <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
-                        <h1>
-                            Swar vandana
-                        </h1>
-                        <ul class="page-footer-list">
-                            <li>
-                                <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("Testimonial", "Home")">Testimonial</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("videos", "Home")">videos</a>
-                            </li>
-
-                            <li>
-                                <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("Franchise", "Home")">Franchise</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("Events", "Home")">Events</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("News", "Home")">News</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-angle-right"></i>
-                                <a href="@Url.Action("contact", "Home")">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3">
-                    <div class="text-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".7s">
-                        <h1>
-                            Text Widget
-                        </h1>
-                        <p>
-                            Let's the music flow in your heart .
-                            Music is love looking for words . &nbsp;&nbsp;&nbsp;
-                            Music chose you - you need not chose music .
-                            Music = Life & Life = Music.
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer end -->
-    <!--small footer start -->
-    <footer class="footer-small">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-6 pull-right">
-                    <ul class="social-link-footer list-unstyled">
-                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="https://www.facebook.com/profile.php?id=100006713056318" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".5s"><a href="https://twitter.com/SvarVandana" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".8s"><a target="_blank" href="https://www.youtube.com/watch?v=ML6Zye54mDE"><i class="fa fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <div class="copyright">
-                        <p> Copyright &copy;  2015 - Swarvandana.com.  All rights reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--small footer end-->
-    <!-- js placed at the end of the document so the pages load faster
-    <script src="js/jquery.js">
-    </script>
-    -->
-    <script src="@Url.Content("~/Content/js/jquery-1.8.3.min.js")"></script>
-    <script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/js/hover-dropdown.js")"></script>
-    <script defer src="@Url.Content("~/Content/js/jquery.flexslider.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/assets/bxslider/jquery.bxslider.js")"></script>
-
-    <script type="text/javascript" src="@Url.Content("~/Content/js/jquery.parallax-1.1.3.js")"></script>
-    <script src="@Url.Content("~/Content/js/wow.min.js")"></script>
-    <script src="@Url.Content("~/Content/assets/owlcarousel/owl.carousel.js")"> </script>
-
-    <script src="@Url.Content("~/Content/js/jquery.easing.min.js")"></script>
-    <script src="@Url.Content("~/Content/js/link-hover.js")"></script>
-    <script src="@Url.Content("~/Content/js/superfish.js")">  </script>
-    <script type="text/javascript" src="@Url.Content("~/Content/js/parallax-slider/jquery.cslider.js")"></script>
-    <script type="text/javascript">
-        $(function () {
-
-            $('#da-slider').cslider({
-                autoplay: true,
-                bgincrement: 100
-            });
-
-        });
-    </script>
-
-
-
-    <!--common script for all pages-->
-    <script src="@Url.Content("~/Content/js/common-scripts.js")">
-    </script>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-
-
-            $('.bxslider1').bxSlider({
-                minSlides: 5,
-                maxSlides: 6,
-                slideWidth: 360,
-                slideMargin: 2,
-                moveSlides: 1,
-                responsive: true,
-                nextSelector: '#slider-next',
-                prevSelector: '#slider-prev',
-                nextText: 'Onward →',
-                prevText: '← Go back'
-            });
-
-        });
-
-
-    </script>
-
-
+    <script src="@Url.Content("~/content/banner/js/jquery.min.js")"></script>
+    <script src="@Url.Content("~/content/scripts/modernizr-2.6.1.min.js")"></script>
+    <script src="@Url.Content("~/content/slider/scripts/jquery.min.js")"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="@Url.Content("~/content/banner/js/responsive-carousel.js")"></script>
     <script>
-        $('a.info').tooltip();
 
-        $(window).load(function () {
-            $('.flexslider').flexslider({
-                animation: "slide",
-                start: function (slider) {
-                    $('body').removeClass('loading');
-                }
-            });
-        });
+        // Custom options for the carousel
+        var args = {
+            arrowRight: '.arrow-right',
+            arrowLeft: '.arrow-left',
+            speed: 700,
+            slideDuration: 4000
+        };
+        // start BannerSlide
+        $('.carousel').BannerSlide(args);
 
-        $(document).ready(function () {
+    </script>
+    <script type="text/javascript">
 
-            $("#owl-demo").owlCarousel({
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
 
-                items: 4
-
-            });
-
-        });
-
-        jQuery(document).ready(function () {
-            jQuery('ul.superfish').superfish();
-        });
-
-        new WOW().init();
-
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
     </script>
 </body>
