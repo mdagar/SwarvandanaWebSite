@@ -112,6 +112,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\ConfigurationWrapper.cs" />
+    <Compile Include="Code\Controller.cs" />
+    <Compile Include="Code\CookieWrapper.cs" />
+    <Compile Include="Code\Enums.cs" />
+    <Compile Include="Code\Extensions.cs" />
+    <Compile Include="Code\MailHelper.cs" />
+    <Compile Include="Code\RegexExpression.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -172,6 +179,7 @@
     <Content Include="Content\lightbox\x-demo-images\2.gif" />
     <Content Include="Content\lightbox\x-demo-images\3.gif" />
     <Content Include="Content\lightbox\x-demo-images\4.gif" />
+    <Content Include="Content\MailFormats\notification.html" />
     <Content Include="Content\news\page4_img.jpg" />
     <Content Include="Content\news\page4_img1.jpg" />
     <Content Include="Content\news\page4_img2.jpg" />
@@ -258,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\MusicTherapy.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\SvarvandanaWebsite.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -74,12 +74,12 @@
                         <td>
                             <div class="heding2" style="text-align:left;">Send us a message</div>
 
-                            <input type="text" name="text" placeholder="Name"  maxlength="40" class="field"><br>
-                            <input type="text" name="text" placeholder="Email" maxlength="70" class="field"><br>
-                            <input type="text" name="text" placeholder="Contact Number" maxlength="18" class="field"><br>
-                            <input type="text" name="text" placeholder="Address" class="field"><br>                            
-                            <textarea class="textarea" placeholder="Message" maxlength="500" ></textarea>
-                            <div style="text-align:center; margin:12px 0 0 0px;"><a href="#"><img src="@Url.Content("~/Content/images/submit.jpg")"></a></div>
+                            <input type="text" name="text" id="txt_name" placeholder="Name" maxlength="40" class="field"><br>
+                            <input type="text" name="text" id="txt_email" placeholder="Email" maxlength="70" class="field"><br>
+                            <input type="text" name="text" id="txt_contact" placeholder="Contact Number" maxlength="18" class="field"><br>
+                            <input type="text" name="text" id="txt_address" placeholder="Address" class="field"><br>
+                            <textarea class="textarea" id="txt_message" placeholder="Message" maxlength="500"></textarea>
+                            <div style="text-align:center; margin:12px 0 0 0px;"><a href="javascript:void(0)" onclick="sendmail()"><img src="@Url.Content("~/Content/images/submit.jpg")"></a></div>
                         </td>
                     </tr>
                 </table>
@@ -87,25 +87,87 @@
         </tr>
     </table>
 </div>
-<script>
+<script type="text/javascript">
+    function sendmail() {
+    var sendmail = true;
+    var name = $("#txt_name").val();
+    var emailaddress = $("#txt_email").val();
+    var contact = $("#txt_contact").val();
+    var address = $("#txt_address").val();
+    var message = $("#txt_message").val();
 
-    function validEmail(e) {
-        var filter = "/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/";
-        return String(e).search(filter) != -1;
+    if (name == "") {
+        alert("Please enter name");
+        sendmail = false;
+        $("#txt_name").focus();
+        return false;
+    }
+    if (emailaddress == "") {
+        alert("Please enter Email");
+        sendmail = false;
+        $("#txt_email").focus();
+        return false;
+    }
+    if (!validEmail(emailaddress)) {
+        alert("Invalid Email");
+        sendmail = false;
+        $("#txt_email").focus();
+        return false;
+    }
+    if (contact == "") {
+        alert("Please enter contact");
+        sendmail = false;
+        $("#txt_contact").focus();
+        return false;
+    }
+    if (!isvalidcontact(contact)) {
+        alert("Invalid contact number");
+        sendmail = false;
+        $("#txt_contact").focus();
+        return false;
+    }
+    if (address == "") {
+        alert("Please enter address");
+        sendmail = false;
+        $("#txt_address").focus();
+        return false;
+    }
+    if (message == "") {
+        alert("Please enter message");
+        sendmail = false;
+        $("#txt_message").focus();
+        return false;
     }
 
-    function phonenumber(inputtxt)  
-    {  
-        var phoneno = /^\d{10}$/;  
-        if((inputtxt.value.match(phoneno))  
-        {  
-            return true;  
-        }  
-        else  
-        {  
-            alert("message");  
-            return false;  
-        }  
-    }  
+    if (sendmail == true) {
+            $.get("@Url.Action("SendMal","Home")", { name: $("#txt_name").val(), emailaddress: $("#txt_email").val(), contact: $("#txt_contact").val(), address: $("#txt_address").val(), message: $("#txt_message").val() }, function (data) {
+                alert("Thanks for your enquery.\n Our executive will contact you soon.");
+                $("#txt_name").val("");
+                $("#txt_email").val("");
+                $("#txt_contact").val("");
+                $("#txt_address").val("");
+                $("#txt_message").val("");
+
+            });
+        }
+    }
+    function validEmail(e) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(e);
+    }
+
+
+    function Validate(inputtxt) {
+      
+    }
+
+    function isvalidcontact(inputtxt) {
+        var x = inputtxt;
+        if (isNaN(x) || x.indexOf(" ") != -1) {            
+            return false;
+        }
+        else
+            return true;
+    }
 
 </script>
