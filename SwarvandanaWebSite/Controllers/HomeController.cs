@@ -88,6 +88,10 @@ namespace SwarvandanaWebSite.Controllers
         {
             return View();
         }
+        public ActionResult ManagementTeam()
+        {
+            return View();
+        }
 
         public ActionResult SendMal(string name, string emailaddress, string contact, string address, string message)
         {
