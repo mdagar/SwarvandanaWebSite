@@ -12,6 +12,8 @@ namespace SwarvandanaWebSite.Controllers
         //
         // GET: /Home/
 
+        #region Pages
+
         public ActionResult Index()
         {
             return View();
@@ -101,10 +103,44 @@ namespace SwarvandanaWebSite.Controllers
                      .Replace("{Message}", message);
 
             //MailHelper.SendEmail(SessionWrapper.Users.EmailAddress, Messages.AccountUploadMailSubject, content);
-            MailHelper.SendMail("info@swarvandana.com", "New enquery from swarvandana.com", content);            
+            MailHelper.SendMail("info@swarvandana.com", "New enquery from swarvandana.com", content);
             return Json("", JsonRequestBehavior.AllowGet);
         }
 
+        #endregion
 
+
+        #region GalleryPages
+        public ActionResult HappinessCenter()
+        {
+            return View();
+        }
+
+        public ActionResult UnleashingofPotential()
+        {
+            return View();
+        }
+
+        public ActionResult StressBusting()
+        {
+            return View();
+        }
+
+        public ActionResult ChickenSoupoftheSoul()
+        {
+            return View();
+        }
+
+        public ActionResult SvarVandanaatCorporates()
+        {
+            return View();
+        }
+
+        public ActionResult SvarvandanaatSchool()
+        {
+            return View();
+        }
+
+        #endregion
     }
 }

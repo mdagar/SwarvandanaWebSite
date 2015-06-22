@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "HappinessCenter";
+    Layout = "~/Views/Shared/__Layout.cshtml";
+}
+
+
+<link rel="stylesheet" type="text/css" media="all" href="@Url.Content("~/lightbox-gallery/css/styles.css")">
+<link rel="stylesheet" type="text/css" media="all" href="@Url.Content("~/lightbox-gallery/css/jquery.lightbox-0.5.css")">
+<script type="text/javascript" src="@Url.Content("~/lightbox-gallery/js/jquery.lightbox-0.5.min.js")"></script>
+
+<div class="container_layout">
+    <div id="topbar"><a href="@Url.Action("Events","home")">Back to Events</a></div>
+
+    <div id="w">
+        <div id="content">
+            <h1>Unleashing of Potential</h1>
+            <div id="thumbnails">
+                <ul class="clearfix">
+                    <li><a href="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0292.JPG")"> <img src="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0292.JPG")" height="150" width="150" alt=""></a></li>
+                    <li><a href="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0345.JPG")"><img src="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0345.JPG")" height="150" width="150" alt=""></a></li>
+                    <li><a href="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0350.JPG")"><img src="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0350.JPG")" height="150" width="150" alt=""></a></li>
+                    <li><a href="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0350.JPG")"><img src="@Url.Content("~/lightbox-gallery/images/photos/Happiness/IMG_0350.JPG")" height="150" width="150" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#thumbnails a').lightBox();
+    });
+</script>

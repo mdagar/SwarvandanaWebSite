@@ -8,8 +8,8 @@
     <div style=" font-size:16px; font-family:Arial, Helvetica, sans-serif;">
         <table width="100%" border="0">
             <tr>
-                <td align="center">
-                    <a href="@Url.Content("~/content/images/images.jpg")" class="flipLightBox">
+                <td align="center">                    
+                    <a href="@Url.Action("HappinessCenter")" class="flipLightBox">
                         <img src="@Url.Content("~/content/images/gallery_1.png")" alt="Image 1" />
                     </a><br>
                     Happiness @@ svar-vandana center
@@ -17,30 +17,44 @@
 
 
                 <td align="center">
-                    <a href="@Url.Content("~/content/images/Slider21.jpg")" class="flipLightBox">
+                    <a href="@Url.Content("UnleashingofPotential")" class="flipLightBox">
                         <img src="@Url.Content("~/content/images/gallery_2.png")" alt="Image 1" />
                     </a><br>
 
                     Unleashing of Potential
-                </td>       
+                </td>
                 <td align="center">
-                    <a href="@Url.Content("~/content/images/images.jpg")" class="flipLightBox">
+                    <a href="@Url.Content("UnleashingofPotential")" class="flipLightBox">
                         <img src="@Url.Content("~/content/images/gallery_4.png")" alt="Image 1" />
                     </a><br> Age no Bar
-                </td>    
+                </td>
             </tr>
             <tr><td colspan="3">&nbsp;</td>
             <tr>
-             
+
                 <td align="center">
-                    <a href="@Url.Content("~/content/mages/images.jpg")" class="flipLightBox">
-                        <img src="@Url.Content("~/content/images/gallery_5.png")" alt="Image 1" />
+                    <a href="@Url.Content("StressBusting")" class="flipLightBox">
+                        <img src="@Url.Content("~/content/images/stressbusting.JPG")" alt="Image 1" height="180" width="300" />
                     </a><br> Stress Busting
                 </td>
                 <td align="center">
-                    <a href="@Url.Content("~/content/images/Slider21.jpg")" class="flipLightBox">
-                        <img src="@Url.Content("~/content/images/gallery_6.png")" alt="Image 1" />
+                    <a href="@Url.Content("ChickenSoupoftheSoul")" class="flipLightBox">
+                        <img src="@Url.Content("~/content/images/Souptosoal.JPG")" alt="Image 1" height="180" width="300" />
                     </a><br>Music – Chicken Soup of the Soul
+                </td>
+                <td align="center">
+                    <a href="@Url.Content("SvarVandanaatCorporates")" class="flipLightBox">
+                        <img src="@Url.Content("~/content/images/gallery_5.png")" alt="Image 1" />
+                    </a><br> Svar Vandana at Corporates
+                </td>
+            </tr>
+            <tr>
+
+                <td align="center">
+                    @*@Url.Content("~/content/images/Slider21.jpg")*@
+                    <a href="@Url.Action("SvarvandanaatSchool")" class="flipLightBox">
+                        <img src="@Url.Content("~/content/images/gallery_5.png")" alt="Image 1" />
+                    </a><br>Svar vandana at School
                 </td>
             </tr>
         </table>
@@ -49,6 +63,6 @@
 
 </div>
 
-<script type="text/javascript" src="@Url.Content("~/content/lightbox/jquery.min.js")"></script>
+@*<script type="text/javascript" src="@Url.Content("~/content/lightbox/jquery.min.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/content/lightbox/fliplightbox.min.js")"></script>
-<script type="text/javascript">$('body').flipLightBox()</script>
+<script type="text/javascript">$('body').flipLightBox()</script>*@

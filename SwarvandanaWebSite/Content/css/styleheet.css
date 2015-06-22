@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 body{margin:0px; padding:0px;   font-size:14px; color:#000;
  background:url(../images/bg.jpg) no-repeat center center fixed; 
@@ -7,7 +7,7 @@ body{margin:0px; padding:0px;   font-size:14px; color:#000;
   -o-background-size: cover;
   background-size: cover; }
 
- 
+
  
 .main_layout{width:1000px; margin:0 auto; padding:0px; display:table; }
 .logo{width:200px; margin:10px 0 0 70px; padding:0px; float:left;}
