@@ -141,6 +141,12 @@ namespace SwarvandanaWebSite.Controllers
             return View();
         }
 
+
+        public ActionResult publication()
+        {
+            return View();
+        }
+
         #endregion
     }
 }
